@@ -22,7 +22,7 @@ public class MainController {
     }
 
     public void start() {
-        Call<RestAnimeResponse> call = animeRestApi.getPokemonList();
+        Call<RestAnimeResponse> call = animeRestApi.getAnimeList();
         call.enqueue(new Callback<RestAnimeResponse>() {
             @Override
             public void onResponse(Call<RestAnimeResponse> call, Response<RestAnimeResponse> response) {
