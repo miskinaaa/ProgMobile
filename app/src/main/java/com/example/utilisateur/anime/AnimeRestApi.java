@@ -6,5 +6,5 @@ import retrofit2.http.GET;
 
 public interface AnimeRestApi {
     @GET("anime")
-    Call<RestAnimeResponse> getPokemonList();
+    Call<RestAnimeResponse> getAnimeList();
 }
