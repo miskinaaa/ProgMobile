@@ -1,4 +1,4 @@
-package com.example.projet;
+package com.example.utilisateur.anime;
 
 import org.junit.Test;
 

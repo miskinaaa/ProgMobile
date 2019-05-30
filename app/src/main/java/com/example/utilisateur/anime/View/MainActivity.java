@@ -1,14 +1,14 @@
-package com.example.projet.view;
+package com.example.utilisateur.anime.View;
 
 import android.app.Activity;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-
-import com.example.projet.model.Anime;
-import com.example.projet.Injection;
-import com.example.projet.R;
-import com.example.projet.controller.MainController;
+import com.example.utilisateur.anime.Controller.MainController;
+import com.example.utilisateur.anime.Injection;
+import com.example.utilisateur.anime.Model.Anime;
+import com.example.utilisateur.anime.R;
 
 import java.util.List;
 
@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
         //Optimisation des performances
         recyclerView.setHasFixedSize(true);
-
+        // Layout Manager = Manage l'affichage
         //Initialisation de la variable layoutManager
         layoutManager = new LinearLayoutManager(this);
 
