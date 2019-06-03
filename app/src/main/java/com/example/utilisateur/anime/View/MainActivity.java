@@ -1,7 +1,8 @@
 package com.example.utilisateur.anime.View;
 
 import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -21,11 +22,12 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        MainController controller = new MainController(this, Injection.getRestApiInstance());
+        SharedPreferences sharedPreferences = this.getSharedPreferences("user_prefs", Context.MODE_PRIVATE);
+        MainController controller = new MainController(this, Injection.getRestApiInstance(), sharedPreferences);
         controller.start();
     }
 
-    public void showList(List<Anime> pokemonList) {
+    public void showList(List<Anime> animeList) {
         //Initialisation de la variable recyclerView
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
         //Optimisation des performances
@@ -37,7 +39,7 @@ public class MainActivity extends Activity {
         recyclerView.setLayoutManager(layoutManager);
 
         //Initialisation de la variable mAdapter
-        mAdapter = new MyAdapter(pokemonList);
+        mAdapter = new MyAdapter(animeList);
         recyclerView.setAdapter(mAdapter);
     }
 }
