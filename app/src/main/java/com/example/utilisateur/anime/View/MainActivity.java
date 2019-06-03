@@ -35,6 +35,7 @@ public class MainActivity extends Activity {
         // Layout Manager = Manage l'affichage
         //Initialisation de la variable layoutManager
         layoutManager = new LinearLayoutManager(this);
+        //recyclerView.setLayoutManager(new GridLayoutManager(this,2));
 
         recyclerView.setLayoutManager(layoutManager);
 
