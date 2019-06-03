@@ -7,7 +7,7 @@ import android.widget.TextView;
 import com.example.utilisateur.anime.R;
 
 public class ViewHolder extends RecyclerView.ViewHolder {
-    // each data item is just a string in this case
+
     public TextView txtFirstLine;
     public TextView txtFooter;
     public ImageView img;
