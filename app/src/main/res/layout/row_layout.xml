@@ -11,6 +11,7 @@
             android:layout_gravity="center"
             android:layout_margin="2dp"
             android:elevation="3dp"
+            android:onClick="clickMe"
             card_view:cardCornerRadius="2dp">
 
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"

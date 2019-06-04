@@ -3,19 +3,21 @@ package com.example.utilisateur.anime.Controller;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
 import android.util.Log;
+
 import com.example.utilisateur.anime.AnimeRestApi;
 import com.example.utilisateur.anime.Model.Anime;
 import com.example.utilisateur.anime.Model.RestAnimeResponse;
 import com.example.utilisateur.anime.View.MainActivity;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainController {
     private MainActivity view;
@@ -65,8 +67,8 @@ public class MainController {
         String listAnimeString = sharedPreferences.getString("cle_string", "");
         if(listAnimeString != null && !TextUtils.isEmpty(listAnimeString)){
             Type listType = new TypeToken<List<Anime>>(){}.getType();
-            List<Anime> pokemonList = new Gson().fromJson(listAnimeString, listType);
-            return pokemonList;
+            List<Anime> animeList = new Gson().fromJson(listAnimeString, listType);
+            return animeList;
         }
         return new ArrayList<>();
     }
