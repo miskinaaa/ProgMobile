@@ -5,9 +5,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.utilisateur.anime.Model.Anime;
 import com.example.utilisateur.anime.R;
+
+import java.util.List;
 
 public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
@@ -15,10 +16,10 @@ public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickL
     public TextView txtFooter;
     public ImageView img;
     public View layout;
-    public Anime curr_anime = new Anime();
+    public List<Anime> animes;
 
 
-    public ViewHolder(View v) {
+    public ViewHolder(View v, List<Anime> animesList) {
         super(v);
         layout = v;
         txtFirstLine = (TextView) v.findViewById(R.id.firstLine);
@@ -26,16 +27,14 @@ public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickL
         img = v.findViewById(R.id.icon);
         itemView.setClickable(true);
         itemView.setOnClickListener(this);
+        animes = animesList;
     }
 
     @Override
     public void onClick(View v) {
         Intent intent = new Intent(v.getContext(), SecondActivity.class);
-        intent.putExtra("Anime", curr_anime);
+        intent.putExtra("Anime", animes.get(getAdapterPosition()));
         v.getContext().startActivity(intent);
     }
 
-    /*public void setCurr_anime(Anime curr_anime) {
-        this.curr_anime = curr_anime;
-    }*/
 }
