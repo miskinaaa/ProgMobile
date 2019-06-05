@@ -1,6 +1,6 @@
 # アニメ (anime) 
 
-アニメ est une application Android qui utilise l'API Jikan pour afficher les meilleurs animes.
+アニメ est une application Android qui utilise l'API Jikan pour afficher les meilleurs animes selon MyAnimeList.
 
 ## Installation
 * ``` git clone https://github.com/miskinaaa/ProgMobile.git ```
