@@ -36,7 +36,7 @@ public class MyAdapter extends RecyclerView.Adapter<ViewHolder> {
                                          int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View v = inflater.inflate(R.layout.row_layout, parent, false);
-        ViewHolder vh = new ViewHolder(v);
+        ViewHolder vh = new ViewHolder(v, animeList);
         return vh;
     }
 
