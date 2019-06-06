@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
+
 import com.example.utilisateur.anime.Controller.MainController;
 import com.example.utilisateur.anime.Injection;
 import com.example.utilisateur.anime.Model.Anime;
@@ -57,4 +58,6 @@ public class MainActivity extends Activity {
     public void onBackPressed() {
         super.onBackPressed();
     }
+
+
 }
