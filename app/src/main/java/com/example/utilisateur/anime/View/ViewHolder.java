@@ -37,4 +37,5 @@ public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickL
         v.getContext().startActivity(intent);
     }
 
+
 }
