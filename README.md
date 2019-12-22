@@ -33,5 +33,7 @@
 * <a href="https://github.com/square/retrofit">Retrofit</a>
 * <a href="https://developer.android.com/guide/topics/ui/layout/recyclerview">RecyclerView</a>
 * <a href="https://developer.android.com/reference/android/support/v7/widget/CardView">CardView</a>
+* <a href="https://github.com/bumptech/glide">Glide</a>
+
 
 
